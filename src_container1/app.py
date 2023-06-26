@@ -9,7 +9,6 @@ app.config['SECRET_KEY'] = 'gDLKWIgkuygwdf23'
 @app.route('/', methods=(['POST', 'GET']))
 def index():
     if request.method == 'POST':
-        print(request.form['user_text'])
         save_text(request.form['user_text'])
     return render_template('index.html')
 
