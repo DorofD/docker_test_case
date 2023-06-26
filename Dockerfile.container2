@@ -1,0 +1,5 @@
+FROM uselagoon/python-3.9
+COPY ./src_container2 /src_container2
+WORKDIR /src_container2
+RUN pip install Flask requests
+CMD python app.py

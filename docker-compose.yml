@@ -1,0 +1,23 @@
+version: '3'
+services:
+  container1:
+    build:
+      context: .
+      dockerfile: Dockerfile.container1
+    ports:
+      - 1000:5000
+  container2:
+    build:
+      context: .
+      dockerfile: Dockerfile.container2
+    depends_on:
+      - container1
+
+  container3:
+    build:
+      context: .
+      dockerfile: Dockerfile.container3
+    depends_on:
+      - container2
+    ports:
+      - 80:80
