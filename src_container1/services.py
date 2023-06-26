@@ -40,5 +40,3 @@ def get_notes():
     result = [i[1] for i in cursor.fetchall()]
     return result
 
-
-print(get_notes())

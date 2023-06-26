@@ -7,6 +7,3 @@ def get_notes():
     temp = response.content.decode('utf8').replace("'", '"')
     data = json.loads(temp)
     return data['notes']
-
-
-print(get_notes())
